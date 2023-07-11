@@ -1,2 +1,1 @@
 # rails-blogging-app
-dev
