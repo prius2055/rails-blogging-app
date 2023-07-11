@@ -82,7 +82,7 @@ Clone this repository to your desired folder:
 
 <ul>
 
-    <li>run git clone "https://https://github.com/prius2055/rails-blogging-app.gitt"</li>
+    <li>run git clone "https://https://github.com/prius2055/rails-blogging-app.git"</li>
 
   </ul>
 
