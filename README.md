@@ -82,7 +82,7 @@ Clone this repository to your desired folder:
 
 <ul>
 
-    <li>run git clone "https://github.com/prius2055/blogging-app.git"</li>
+    <li>run git clone "https://https://github.com/prius2055/rails-blogging-app.gitt"</li>
 
   </ul>
 
@@ -159,7 +159,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/prius2055/blogging-app/issues).
+Feel free to check the [issues page](https://github.com/prius2055/rails-blogging-app.git/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
