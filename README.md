@@ -50,6 +50,9 @@
 ### Key Features <a name="key-features"></a>
 
 - **[A data model using an ERD diagram]**
+**[Methods for updating models]**
+**[Methods for performing operations on models]**
+**[Methods for applying CRUD to models]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
