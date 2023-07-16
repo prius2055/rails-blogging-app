@@ -54,7 +54,8 @@
 **[Methods for performing operations on models]**
 **[Methods for applying CRUD to models]**
 **[Validations for attributes in models]**
-**[unit spec for all validations and methods in models]**
+**[Unit spec for all validations and methods in models]**
+**[Controllers for users and post models]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -153,8 +154,7 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Create controllers]**
-- [ ] **[Create views]**
+- [ ] **[Upadte the views dynamically]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
