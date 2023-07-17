@@ -50,12 +50,12 @@
 ### Key Features <a name="key-features"></a>
 
 - **[A data model using an ERD diagram]**
-**[Methods for updating models]**
-**[Methods for performing operations on models]**
-**[Methods for applying CRUD to models]**
-**[Validations for attributes in models]**
-**[Unit spec for all validations and methods in models]**
-**[Controllers for users and post models]**
+  **[Methods for updating models]**
+  **[Methods for performing operations on models]**
+  **[Methods for applying CRUD to models]**
+  **[Validations for attributes in models]**
+  **[Unit spec for all validations and methods in models]**
+  **[Controllers for users and post models]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
