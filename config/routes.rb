@@ -8,10 +8,4 @@ Rails.application.routes.draw do
     resources :posts, only:[:index, :show]
   end
 
-  # get '/users', to: 'users#index'
-  # get '/users/:id', to: 'users#show'
-
-  # get '/users/:id/posts', to: 'posts#show'
-  # get '/users/:id/posts/:id', to: 'posts#show'
-
 end
