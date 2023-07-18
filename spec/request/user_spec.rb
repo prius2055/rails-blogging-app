@@ -4,5 +4,10 @@ describe UsersController, type: :request do
       get users_path
       expect(response).to be_successful
     end
+
+    it 'renders the index template' do
+      get users_path
+      expect(response).to render_template(:index)
+    end
   end
 end
