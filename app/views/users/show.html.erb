@@ -14,11 +14,12 @@
     <div style="border: 1px solid black; width: 500px; margin-bottom: 15px; padding-left: 10px">
     <p>Post #<%= post.id %></p>
     <p><%= post.text %></p>
+    <p style="text-align: right;"> Comments:<span><%= post.comments_counter %></span>, Likes: <span><%= post.likes_counter %></span> </p>
     </div>
    
   <% end %>
 
-  
+  <button>See all posts</button>
 </div>
 
 
