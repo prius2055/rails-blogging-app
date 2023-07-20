@@ -57,6 +57,7 @@
   **[Unit spec for all validations and methods in models]**
   **[Controllers for users and post models]**
   **[Unit spec test for all request]**
+   **[Views to see actions on the blog]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
