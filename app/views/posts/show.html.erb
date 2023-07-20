@@ -1,1 +1,27 @@
-<%= 'Here is a specific post for a single user' %>
+<div>
+<div style="margin-bottom: 30px; margin-top: 30px; margin-left: 40%;">
+
+<div style="border: 1px solid black; width: 500px; margin-bottom: 15px; padding-left: 10px">
+
+<div>
+<div>
+<p>Post #<%=@post.id %> by<%=@post.author.name %>  </p>
+<p><span>Comments:<%= @post.comments_counter %></span>, <span>Likes:<%= @post.likes_counter %></p>
+</div>
+<p><%=@post.text %>  </p>
+</div>
+
+</div>
+   <div style="border: 1px solid black; padding-left: 10px; padding-right: 10px;margin-bottom: 20px;">
+   <%@post.five_most_recent_comments.each do |postcomment| %>
+   <p><span><%= postcomment.author.name %></span>: <span><%= postcomment.text %></span></p>
+  
+    <% end %>
+    </div>
+ 
+
+  <button>See all posts</button>
+</div>
+
+
+</div>
