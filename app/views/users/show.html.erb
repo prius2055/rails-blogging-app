@@ -1,26 +1,27 @@
-<div>
+<div class="user" >
  
-<%= render @user %>
+    <%= render @user %>
 
-<div style="margin-bottom: 30px; margin-top: 30px; margin-left: 40%;">
-
-<div style="border: 1px solid black; width: 500px; margin-bottom: 15px; padding-left: 10px">
-<p>bio </p>
-<p> <%=@user.bio %> </p>
- </div>
-
-<% @user.three_most_recent_post.each do |post| %>
-    
-    <div style="border: 1px solid black; width: 500px; margin-bottom: 15px; padding-left: 10px">
-    <p>Post #<%= post.id %></p>
-    <p><%= post.text %></p>
-    <p style="text-align: right;"> Comments:<span><%= post.comments_counter %></span>, Likes: <span><%= post.likes_counter %></span> </p>
-    </div>
    
-  <% end %>
 
-  <button>See all posts</button>
-</div>
+      <div class='user-bio'>
+        <p>bio </p>
+        <p> <%=@user.bio %> </p>
+      </div>
+
+      <% @user.three_most_recent_post.each do |post| %>
+    
+        <div class='user-text'>
+          <p>Post #<%= post.id %></p>
+          <p><%= post.text %></p>
+          <p style="text-align: right;"> Comments:<span><%= post.comments_counter %></span>, Likes: <span><%= post.likes_counter %></span> </p>
+        </div>
+   
+      <% end %>
+      
+      
+      
+      <a href="/users/<%= @user.id%>/posts" ><button>See all Posts</button></a>
 
 
 </div>

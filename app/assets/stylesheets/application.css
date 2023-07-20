@@ -13,3 +13,79 @@
  *= require_tree .
  *= require_self
  */
+
+.user {
+  border: 2px solid black;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 25px;
+}
+
+.user-partial {
+  display: flex;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.user-partial img {
+  width: 150px;
+  height: 150px;
+}
+
+.user-partial .users {
+  border: 1px solid black;
+  width: 400px;
+  margin-left: 15px;
+}
+
+.user-name {
+  font-size: 24px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+}
+
+.user-id {
+  font-size: 24px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.user-post {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.user-link {
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  text-align: center;
+  padding-top: 0;
+}
+
+.user-link a {
+  text-decoration: none;
+}
+
+.user-bio {
+  border: 1px solid black;
+  width: 550px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.user-text {
+  border: 1px solid black;
+  width: 550px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.user button {
+  margin-bottom: 15px;
+}
+
+.user a {
+  text-decoration: none;
+}
