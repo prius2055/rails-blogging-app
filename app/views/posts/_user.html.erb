@@ -1,0 +1,37 @@
+<div style="display: flex; margin-bottom: 30px; margin-top: 30px; margin-left: 40%;">
+  <img src=<%= user.post.photo %> alt='user <%= user.id %> photo'/>
+
+<div style="border: 1px solid black; width: 350px;margin-left: 15px; ">
+  <p style="font-size: 24px; padding-left: 10px; margin-bottom: 0px; padding-bottom: 0px;">
+    <%= user.name %>
+   
+  </p>
+  <p style="font-size: 24px; padding-left: 10px; margin-top: 0; padding-top: 0;">
+    (user id: <%= user.id %>)
+  </p>
+
+  <p style="text-align: right; padding-right: 10px;">
+    Number of post: <%=user.posts_counter %>
+  </p>
+  </div>
+
+</div>
+
+<%# # app/views/users/show.html.erb %>
+
+<%# <h1><%= @user.name %></h1> %>
+
+<%# <% @user.posts.each do |post| %> %>
+  <%# <%= render partial: 'posts/post', locals: { post: post } %> %>
+<%# <% end %> %>
+
+
+<%# # app/views/posts/_post.html.erb %>
+
+<%# <div class="post"> %>
+  <%# <h2><%= post.title %></h2> %>
+  <%# <p><%= post.content %></p> %>
+<%# </div> %>
+
+
+<%# https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80 %>

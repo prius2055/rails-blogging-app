@@ -1,3 +1,15 @@
+<div>
+ <%# <%= render partial: "user" :locals => {:user_id => user} %>
 
+  <% @posts.each do |post| %>
+  <div>
+    <p><%= post.id%></p>
+    <p><%= post.text%></p>
+    <p><%= post.comments_counter%></p>
+    <p><%= post.likes_counter%></p>
+    </div>
+  <% end %>
 
+ 
 
+</div>
