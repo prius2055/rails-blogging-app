@@ -1,12 +1,15 @@
-<div>
- <%# <%= render partial: "user" :locals => {:user_id => user} %>
+<div style="margin-left: 40%;border: 1px solid black; width: 350px;">
+ <%= render @user%>
 
   <% @posts.each do |post| %>
-  <div>
-    <p><%= post.id%></p>
-    <p><%= post.text%></p>
-    <p><%= post.comments_counter%></p>
-    <p><%= post.likes_counter%></p>
+   
+   <%= render post %>
+
+   <div style="border: 1px solid black; padding-left: 10px; padding-right: 10px;margin-bottom: 20px;">
+   <%post.five_most_recent_comments.each do |postcomment| %>
+   <p><span><%= postcomment.author.name %></span>: <span><%= postcomment.text %></span></p>
+  
+    <% end %>
     </div>
   <% end %>
 
