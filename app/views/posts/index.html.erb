@@ -1,18 +1,21 @@
-<div style="margin-left: 40%;border: 1px solid black; width: 350px;">
- <%= render @user%>
+<div style="margin-left: 40%; border: 1px solid black; width: 350px">
+  <%= render @user%> <% @posts.each do |post| %> <%= render post %>
 
-  <% @posts.each do |post| %>
-   
-   <%= render post %>
+  <div
+    style="
+      border: 1px solid black;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: 20px;
+    "
+  >
+    <%post.five_most_recent_comments.each do |postcomment| %>
+    <p>
+      <span><%= postcomment.author.name %></span>:
+      <span><%= postcomment.text %></span>
+    </p>
 
-   <div style="border: 1px solid black; padding-left: 10px; padding-right: 10px;margin-bottom: 20px;">
-   <%post.five_most_recent_comments.each do |postcomment| %>
-   <p><span><%= postcomment.author.name %></span>: <span><%= postcomment.text %></span></p>
-  
     <% end %>
-    </div>
+  </div>
   <% end %>
-
- 
-
 </div>
