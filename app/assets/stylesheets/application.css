@@ -89,3 +89,13 @@
 .user a {
   text-decoration: none;
 }
+
+.btn-paginate {
+  text-align: center;
+}
+
+.post-detail {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+}

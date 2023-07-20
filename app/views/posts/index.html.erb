@@ -1,21 +1,23 @@
-<div style="margin-left: 40%; border: 1px solid black; width: 350px">
-  <%= render @user%> <% @posts.each do |post| %> <%= render post %>
+<div class="user">
+ 
+ <%= render 'partials/user', user: @user%>
 
-  <div
-    style="
-      border: 1px solid black;
-      padding-left: 10px;
-      padding-right: 10px;
-      margin-bottom: 20px;
-    "
-  >
-    <%post.five_most_recent_comments.each do |postcomment| %>
-    <p>
-      <span><%= postcomment.author.name %></span>:
-      <span><%= postcomment.text %></span>
-    </p>
+ <% @posts.each do |post| %> 
+ 
+    <%= render 'partials/post', post: post%>
+ 
+    <div class='user-text'>
+      <%post.five_most_recent_comments.each do |postcomment| %>
+        <p>
+          <span><%= postcomment.author.name %></span>:
+          <span><%= postcomment.text %></span>
+        </p>
 
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+   <a href="/users/<%= @user.id%>/posts/<%= post.id%>" ><button>View post #<%= post.id%></button></a>
   <% end %>
+  <div class='btn-paginate'>
+  <button>Pagination</button>
+  </div>
 </div>
