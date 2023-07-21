@@ -99,3 +99,7 @@
   justify-content: space-between;
   padding-right: 10px;
 }
+
+.error {
+  color: red;
+}

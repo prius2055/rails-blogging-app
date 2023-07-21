@@ -16,7 +16,9 @@
       <% end %>
     </div>
    <a href="/users/<%= @user.id%>/posts/<%= post.id%>" ><button>View post #<%= post.id%></button></a>
+   
   <% end %>
+  <a href="/users/<%= @user.id%>/posts/new" ><button style="margin-left: 150px;">Create new post</button></a>
   <div class='btn-paginate'>
   <button>Pagination</button>
   </div>
