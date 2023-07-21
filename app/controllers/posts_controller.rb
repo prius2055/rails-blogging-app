@@ -9,6 +9,6 @@ class PostsController < ApplicationController
   end
 
    def new
-    @post = Post.new
+    @post = Post.new(@active_user)
   end
 end
