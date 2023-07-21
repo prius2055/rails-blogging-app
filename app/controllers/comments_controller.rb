@@ -6,13 +6,12 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.author_id = current_user.id
-    @post.likes_counter = 0
-    @post.comments_counter = 0
+    @comment = Comment.new(comment_params)
+    @comment.author_id = current_user.id
+    @comment.post_id = post.id
 
-   if @post.save
-      redirect_to users_path, notice: 'Post was successfully created.'
+   if @comment.save
+      redirect_to post_path, notice: 'Comment was successfully created.'
     else
       render :new
     end
@@ -20,8 +19,8 @@ class CommentsController < ApplicationController
 
     private
 
-  def post_params
-    params.require(:post).permit(:title, :text)
+  def comment_params
+    params.require(:comment).permit(:text)
   end
 
 end

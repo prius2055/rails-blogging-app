@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     @post.comments_counter = 0
 
    if @post.save
-      redirect_to users_path, notice: 'Post was successfully created.'
+      redirect_to post_path, notice: 'Post was successfully created.'
     else
       render :new
     end
