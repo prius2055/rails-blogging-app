@@ -1,11 +1,11 @@
 <div>
 
-    <% if @post.errors.any? %>
+    <% if @comment.errors.any? %>
         <div class='error'>
-            <h2><%= pluralize(@post.errors.count, "error") %> prohibited this user from being saved:</h2>
+            <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this user from being saved:</h2>
 
             <ul>
-                <% @post.errors.each do |error| %>
+                <% @comment.errors.each do |error| %>
                     <li><%= error.full_message %></li>
                 <% end %>
             </ul>
@@ -14,14 +14,9 @@
 
 
 
-    <%= form_with url:'/users/3/posts', model: @post do |form| %>
+    <%= form_with url:'/users/3/posts/1/comments', model: @comment do |form| %>
         <div>
-            <%= form.label :title %>
-            <%= form.text_field :title %>
-        </div>
-
-        <div>
-            <%= form.label :text %>
+            <%= form.label :text,'You can drop your comments here' %>
             <%= form.text_field :text %>
         </div>
 
