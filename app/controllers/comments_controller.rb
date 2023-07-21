@@ -1,8 +1,14 @@
 class CommentsController < ApplicationController
  
+    def index
+    # @comments = Comments.all
+    @comments = Comment.where(post_id: params[:post.id])
+
+   
+  end
 
    def new
-    @post = Post.new
+    @post = Cooment.new
   end
 
   def create
