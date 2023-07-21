@@ -1,1 +1,22 @@
-<%= 'Here is a specific post for a single user' %>
+<div class="user">
+ 
+ <div class='user-text'>
+    <div class='post-detail'>
+      <p>Post #<%=@post.id %> by <%=@post.author.name %></p>
+      <p>
+        Comments:<span><%= @post.comments_counter %></span>,
+        Likes: <span><%= @post.likes_counter %></span>
+      </p>
+    </div>
+    <p><%=@post.text %></p>
+  </div>
+
+  <div class='user-text'>
+    <%@post.five_most_recent_comments.each do |postcomment| %>
+      <p>
+        <span><%= postcomment.author.name %></span>:
+        <span><%= postcomment.text %></span>
+      </p>
+    <% end %>
+  </div>
+</div>

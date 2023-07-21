@@ -1,5 +1,21 @@
-<div>
+<div class="user" >
+    <%= render 'partials/user', user: @user%>
 
-<%= 'Here is a single user' %>
+    <div class='user-bio'>
+      <p>bio </p>
+      <p> <%=@user.bio %> </p>
+    </div>
+
+    <% @user.three_most_recent_post.each do |post| %>
+      <div class='user-text'>
+        <p>Post #<%= post.id %></p>
+        <p><%= post.text %></p>
+        <p class='user-post'> Comments:<span><%= post.comments_counter %></span>, Likes: <span><%= post.likes_counter %></span> </p>
+      </div>
+    <% end %>
+    <a href="/users/<%= @user.id%>/posts" ><button>See all Posts</button></a>
 
 </div>
+
+
+
