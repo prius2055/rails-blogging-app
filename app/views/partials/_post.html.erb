@@ -2,7 +2,7 @@
   <p>Post #<%= post.id%></p>
 
   <p><%= post.text%></p>
-
+   <%= render 'partial/like' %>
   <p class='user-post'>
     Comments:<span><%= post.comments_counter %></span>,
     Likes:<span><%= post.likes_counter %></span>
