@@ -15,6 +15,7 @@
     </div>
     <p><%=@post.text %></p>
   </div>
+  <%= render 'partials/like'%>
 
   <div class='user-text'>
     <%@post.five_most_recent_comments.each do |postcomment| %>
