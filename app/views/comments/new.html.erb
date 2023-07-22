@@ -1,4 +1,4 @@
-<div>
+<div class='user'>
 
     <% if @comment.errors.any? %>
         <div class='error'>
@@ -13,14 +13,15 @@
     <% end%>
 
 
-
-    <%= form_with url:'/users/3/posts/1/comments', model: @comment do |form| %>
-        <div>
+   
+        <%= form_with url:"/users/3/posts/#{params[:post_id]}/comments", model: @comment do |form| %>
+        <div class='user-textarea'>
             <%= form.label :text,'You can drop your comments here' %>
-            <%= form.text_field :text %>
+            <%= form.text_area :text, size: '70x10' %>
         </div>
 
-        <%= form.submit 'Create A New Comment'%>
-    <% end %>
+        <%= form.submit 'Submit'%>
+        <% end %>
+     
 
 </div>

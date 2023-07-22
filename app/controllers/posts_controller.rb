@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
   end
 
    def new
@@ -19,7 +20,7 @@ class PostsController < ApplicationController
     @post.comments_counter = 0
 
    if @post.save
-      redirect_to post_path, notice: 'Post was successfully created.'
+      redirect_to "/users/#{params[:user_id]}/posts"
     else
       render :new
     end
