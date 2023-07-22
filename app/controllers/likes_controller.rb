@@ -5,7 +5,7 @@ class LikesController < ApplicationController
     @like.post_id = params[:post_id]
 
     if @like.save
-      redirect_to(request.referrer || root_path)
+      redirect_to "/users/#{params[:user_id]}/posts"
     else
       render :new
     end
