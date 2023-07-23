@@ -1,13 +1,23 @@
 class LikesController < ApplicationController
-  def create
+  def index
     @like = Like.new
-    @like.author_id = current_user.id
-    @like.post_id = params[:post_id]
+    @post = Post.find(params[:id])
+  end
+
+  def new
+    @like = Like.new
+    @post = Post.find(params[:post_id])
+  end
+
+  def create
+    @post = Post.find(params[:post_id])
+    @like = Like.new(post: @post, author: current_user)
+
 
     if @like.save
-      redirect_to "/users/#{params[:user_id]}/posts"
+      redirect_to "/users/#{params[:user_id]}/posts/#{params[:post_id]}"
     else
-      render :new
+      redirect_to :new
     end
   end
 end

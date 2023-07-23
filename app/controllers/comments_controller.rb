@@ -1,14 +1,9 @@
 class CommentsController < ApplicationController
- 
-    def index
+  def index
     @comments = Comment.all
-   
-    
-
-   
   end
 
-   def new
+  def new
     @comment = Comment.new
   end
 
@@ -17,17 +12,16 @@ class CommentsController < ApplicationController
     @comment.author_id = current_user.id
     @comment.post_id = params[:post_id]
 
-   if @comment.save
+    if @comment.save
       redirect_to "/users/#{params[:user_id]}/posts/#{params[:post_id]}"
     else
       render :new
     end
   end
 
-    private
+  private
 
   def comment_params
     params.require(:comment).permit(:text)
   end
-
 end

@@ -1,13 +1,8 @@
 <div class="user">
 
- <p style="color: green"><%= notice %></p>
-
  <div class='user-text'>
     <div class='post-detail'>
       <p>Post #<%=@post.id %> by <%=@post.author.name %></p>
-
-      
-
       <p>
         Comments:<span><%= @post.comments_counter %></span>,
         Likes: <span><%= @post.likes_counter %></span>
@@ -15,7 +10,7 @@
     </div>
     <p><%=@post.text %></p>
   </div>
-  <%= render 'partials/like'%>
+  
 
   <div class='user-text'>
     <%@post.five_most_recent_comments.each do |postcomment| %>
@@ -25,6 +20,9 @@
       </p>
     <% end %>
   </div>
+
+ 
+  <a href='/users/<%= @user.id%>/posts/<%= @post.id%>/likes/new' ><button style="margin-left: 150px;">Like this post</button></a>
   <a href='/users/<%= @user.id%>/posts/<%= @post.id%>/comments/new' ><button style="margin-left: 150px;">Add a comment</button></a>
   
 </div>

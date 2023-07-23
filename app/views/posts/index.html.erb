@@ -2,10 +2,11 @@
  
  <%= render 'partials/user', user: @user%>
 
-
  <% @posts.each do |post| %> 
  
     <%= render 'partials/post', post: post%>
+   
+    
  
     <div class='user-text'>
       <%post.five_most_recent_comments.each do |postcomment| %>
@@ -17,9 +18,10 @@
       <% end %>
     </div>
    <a href="/users/<%= @user.id%>/posts/<%= post.id%>" ><button>View post #<%= post.id%></button></a>
-   
+    
   <% end %>
-  <a href="/users/<%= @user.id%>/posts/new" ><button style="margin-left: 150px;">Create new post</button></a>
+  
+  <a href="/users/<%= @user.id%>/posts/new" ><button style="margin-top: 10px;">Create new post</button></a>
   <div class='btn-paginate'>
   <button>Pagination</button>
   </div>

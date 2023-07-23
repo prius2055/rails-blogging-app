@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
-   def new
+  def new
     @post = Post.new
   end
 
@@ -19,17 +19,16 @@ class PostsController < ApplicationController
     @post.likes_counter = 0
     @post.comments_counter = 0
 
-   if @post.save
+    if @post.save
       redirect_to "/users/#{params[:user_id]}/posts"
     else
       render :new
     end
   end
 
-    private
+  private
 
   def post_params
     params.require(:post).permit(:title, :text)
   end
-
 end
