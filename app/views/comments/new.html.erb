@@ -1,0 +1,27 @@
+<div class='user'>
+
+    <% if @comment.errors.any? %>
+        <div class='error'>
+            <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+            <ul>
+                <% @comment.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end%>
+
+
+   
+        <%= form_with url:"/users/3/posts/#{params[:post_id]}/comments", model: @comment do |form| %>
+        <div class='user-textarea'>
+            <%= form.label :text,'You can drop your comments here' %>
+            <%= form.text_area :text, size: '70x10' %>
+        </div>
+
+        <%= form.submit 'Submit'%>
+        <% end %>
+     
+
+</div>

@@ -99,3 +99,18 @@
   justify-content: space-between;
   padding-right: 10px;
 }
+
+.error {
+  color: red;
+}
+
+.user-textarea {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.user-text-field {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
