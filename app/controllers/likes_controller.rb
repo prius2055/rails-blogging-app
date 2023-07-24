@@ -13,7 +13,6 @@ class LikesController < ApplicationController
     @post = Post.find(params[:post_id])
     @like = Like.new(post: @post, author: current_user)
 
-
     if @like.save
       redirect_to "/users/#{params[:user_id]}/posts/#{params[:post_id]}"
     else
