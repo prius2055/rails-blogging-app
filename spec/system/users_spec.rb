@@ -42,7 +42,6 @@ describe 'User', type: :system do
       @post2 = Post.create(title: 'post 2', text: 'Second post', comments_counter: 0, likes_counter: 0, author: @user1)
       @post3 = Post.create(title: 'post 3', text: 'Third post', comments_counter: 0, likes_counter: 0, author: @user1)
 
-
       visit user_path(@user1)
     end
 
