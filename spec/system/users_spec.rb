@@ -19,7 +19,9 @@ describe 'User', type: :system do
       expect(page).to have_xpath("//img[contains(@src,'https://unsplash.com/photos/man-person-standing-between-tall-trees-F_-0BxGuVvo')]")
     end
 
-    #####
+    it 'should show the number of posts each user has written.' do
+      expect(page).to have_content("Number of post: #{@user1.posts_counter}")
+    end
 
     it 'should redirected to that user show page, When I click on a user' do
       click_link @user1.name
