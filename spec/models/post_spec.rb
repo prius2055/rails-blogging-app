@@ -41,7 +41,7 @@ describe Post, type: :model do
                   likes_counter: 0)
     end
     it 'increments the posts_counter when a new post is added' do
-      expect { post.update_user_posts_counter }.to change { first_user.reload.posts_counter }.by(1)
+      expect { post}.to change { first_user.reload.posts_counter }.by(1)
     end
   end
 

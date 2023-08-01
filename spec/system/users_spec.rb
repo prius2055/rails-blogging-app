@@ -31,7 +31,7 @@ describe 'User', type: :system do
 
    describe 'user#show' do
     before(:each) do
-      
+       @user1 = User.create(name: 'Prince', photo: 'https://unsplash.com/photos/man-person-standing-between-tall-trees-F_-0BxGuVvo', bio: 'Software developer',posts_counter: 0)
     @post1 = Post.create(title: 'post 1', text: 'First post', comments_counter: 0, likes_counter: 0, author: @user1)
      @post2 = Post.create(title: 'post 2', text: 'Second post', comments_counter: 0, likes_counter: 0, author: @user1)
       @post3 = Post.create(title: 'post 3', text: 'Third post', comments_counter: 0, likes_counter: 0, author: @user1)
