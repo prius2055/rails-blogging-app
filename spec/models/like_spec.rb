@@ -9,7 +9,7 @@ describe Like, type: :model do
     let(:like) { Like.create(author: user, post:) }
 
     it 'increments the likes_counter of the associated post' do
-      expect { like.update_post_likes_counter }.to change { post.reload.likes_counter }.by(1)
+      expect { like }.to change { post.reload.likes_counter }.by(1)
     end
   end
 end

@@ -8,6 +8,10 @@ class Post < ApplicationRecord
   validates :likes_counter, comparison: { greater_than_or_equal_to: 0 }
 
   before_save do
+    update_user_posts_counter
+  end
+
+  def update_user_posts_counter
     user = User.find_by(id: author.id)
     user.increment!(:posts_counter)
   end

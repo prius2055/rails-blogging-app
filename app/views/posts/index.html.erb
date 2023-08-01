@@ -1,8 +1,11 @@
+
+
 <div class="user">
  
  <%= render 'partials/user', user: @user%>
 
- <% @posts.each do |post| %> 
+ <% @posts.includes(:comments).each do |post| %> 
+ 
  
     <%= render 'partials/post', post: post%>
    
@@ -19,9 +22,10 @@
     </div>
    <a href="/users/<%= @user.id%>/posts/<%= post.id%>" ><button>View post #<%= post.id%></button></a>
     
-  <% end %>
+ 
   
   <a href="/users/<%= @user.id%>/posts/new" ><button style="margin-top: 10px;">Create new post</button></a>
+  <% end %>
   <div class='btn-paginate'>
   <button>Pagination</button>
   </div>

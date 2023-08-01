@@ -1,8 +1,7 @@
 <div class="user">
   <% @users.each do |user| %>
+
     <%= render 'partials/user', user: user%>
-    <p class='user-link'>
-      <%= link_to "Show this user", user %>
-    </p>
+   
   <% end %>
 </div>
