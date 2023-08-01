@@ -17,7 +17,7 @@ describe 'Post', type: :system do
     end
 
     it 'should show the profile picture for each user.' do
-      expect(page).to have_xpath("//img[contains(@src,'https://unsplash.com/photos/man-person-standing-between-tall-trees-F_-0BxGuVvo')]")
+      expect(page).to have_xpath("//img[contains(@src,'https://unsplash.com/photos/G-jo31ESuRE')]")
     end
 
     it 'should show the username of the user' do
