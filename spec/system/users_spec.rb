@@ -51,7 +51,9 @@ describe 'User', type: :system do
       expect(page).to have_content("Number of post: 3")
     end
 
-    #####
+    it 'should show the user bio' do
+      expect(page).to have_content(@user1.bio)
+    end
 
    
   end
