@@ -2,8 +2,12 @@ require 'rails_helper'
 
 describe 'User', type: :system do
   before(:each) do
-    @user1 = User.create(name: 'Prince', photo: 'https://unsplash.com/photos/man-person-standing-between-tall-trees-F_-0BxGuVvo', bio: 'Software developer',posts_counter: 0)
-    @user2 = User.create(name: 'Mahabub', photo: 'https://unsplash.com/photos/man-person-standing-between-tall-trees-F_-0BxGuVvo', bio: 'Coder', posts_counter: 0)
+    @user1 = User.create(name: 'Prince',
+                         photo: 'https://unsplash.com/photos/man-person-standing-between-tall-trees-F_-0BxGuVvo',
+                         bio: 'Software developer', posts_counter: 0)
+    @user2 = User.create(name: 'Mahabub',
+                         photo: 'https://unsplash.com/photos/man-person-standing-between-tall-trees-F_-0BxGuVvo',
+                         bio: 'Coder', posts_counter: 0)
   end
 
   describe 'user#index' do
@@ -29,13 +33,15 @@ describe 'User', type: :system do
     end
   end
 
-   describe 'user#show' do
+  describe 'user#show' do
     before(:each) do
-       @user1 = User.create(name: 'Prince', photo: 'https://unsplash.com/photos/man-person-standing-between-tall-trees-F_-0BxGuVvo', bio: 'Software developer',posts_counter: 0)
-    @post1 = Post.create(title: 'post 1', text: 'First post', comments_counter: 0, likes_counter: 0, author: @user1)
-     @post2 = Post.create(title: 'post 2', text: 'Second post', comments_counter: 0, likes_counter: 0, author: @user1)
+      @user1 = User.create(name: 'Prince',
+                           photo: 'https://unsplash.com/photos/man-person-standing-between-tall-trees-F_-0BxGuVvo',
+                           bio: 'Software developer', posts_counter: 0)
+      @post1 = Post.create(title: 'post 1', text: 'First post', comments_counter: 0, likes_counter: 0, author: @user1)
+      @post2 = Post.create(title: 'post 2', text: 'Second post', comments_counter: 0, likes_counter: 0, author: @user1)
       @post3 = Post.create(title: 'post 3', text: 'Third post', comments_counter: 0, likes_counter: 0, author: @user1)
-  
+
 
       visit user_path(@user1)
     end
@@ -49,7 +55,7 @@ describe 'User', type: :system do
     end
 
     it 'should show the number of posts each user has written.' do
-      expect(page).to have_content("Number of post: 3")
+      expect(page).to have_content('Number of post: 3')
     end
 
     it 'should show the user bio' do
@@ -61,7 +67,7 @@ describe 'User', type: :system do
         expect(page).to have_content(@post1.text)
       end
 
-       it 'should show the user second post' do
+      it 'should show the user second post' do
         expect(page).to have_content(@post2.text)
       end
 
@@ -74,22 +80,18 @@ describe 'User', type: :system do
       end
     end
 
-     it 'should show button to view all user post' do
-        expect(page).to have_content('See all Posts')
-      end
+    it 'should show button to view all user post' do
+      expect(page).to have_content('See all Posts')
+    end
 
-       it 'should redirect to the post show page, When I click a post' do
+    it 'should redirect to the post show page, When I click a post' do
       click_link @post1.text
       expect(page).to have_content('First post')
     end
 
- it 'should redirect to the post index page, When I click on the See all Posts button' do
+    it 'should redirect to the post index page, When I click on the See all Posts button' do
       click_link 'See all Posts'
       expect(page).to have_current_path(user_posts_path(@user1))
     end
-
-   
-
-   
   end
 end

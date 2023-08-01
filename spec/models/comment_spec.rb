@@ -11,7 +11,7 @@ describe Like, type: :model do
     let(:first_comment) { Comment.create(author: first_user, post: first_post) }
 
     it 'increments the comments_counter of the associated post' do
-      expect { first_comment}.to change { first_post.reload.comments_counter }.by(1)
+      expect { first_comment }.to change { first_post.reload.comments_counter }.by(1)
     end
   end
 end

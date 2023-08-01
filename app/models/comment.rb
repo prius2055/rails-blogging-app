@@ -6,7 +6,7 @@ class Comment < ApplicationRecord
     update_post_comments_counter
   end
 
-   def update_post_comments_counter
+  def update_post_comments_counter
     post = Post.find_by(id: post_id)
     post.increment!(:comments_counter)
   end
