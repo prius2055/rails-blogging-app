@@ -31,6 +31,7 @@ describe 'User', type: :system do
 
    describe 'user#show' do
     before(:each) do
+      
     @post1 = Post.create(title: 'post 1', text: 'First post', comments_counter: 0, likes_counter: 0, author: @user1)
      @post2 = Post.create(title: 'post 2', text: 'Second post', comments_counter: 0, likes_counter: 0, author: @user1)
       @post3 = Post.create(title: 'post 3', text: 'Third post', comments_counter: 0, likes_counter: 0, author: @user1)
@@ -54,6 +55,40 @@ describe 'User', type: :system do
     it 'should show the user bio' do
       expect(page).to have_content(@user1.bio)
     end
+
+    describe 'show user first three post' do
+      it 'should show the user first post' do
+        expect(page).to have_content(@post1.text)
+      end
+
+       it 'should show the user second post' do
+        expect(page).to have_content(@post2.text)
+      end
+
+      it 'should show the user third post' do
+        expect(page).to have_content(@post3.text)
+      end
+
+      it 'should not show the user fourth post' do
+        expect(page).to_not have_content('Fourth post')
+      end
+    end
+
+     it 'should show button to view all user post' do
+        expect(page).to have_content('See all Posts')
+      end
+
+       it 'should redirect to the post show page, When I click a post' do
+      click_link @post1.text
+      expect(page).to have_content('First post')
+    end
+
+ it 'should redirect to the post index page, When I click on the See all Posts button' do
+      click_link 'See all Posts'
+      expect(page).to have_current_path(user_posts_path(@user1))
+    end
+
+   
 
    
   end
