@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) [2023] [Prince Nwuke]
+Copyright (c) [2023] [Prince Nwuke] & [Md Mahabub Alam]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
