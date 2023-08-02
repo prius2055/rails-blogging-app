@@ -150,6 +150,12 @@ You can deploy this project using:
 - Twitter: [@prius2055](https://www.twitter.com/prius2055)
 - LinkedIn: [@prius2055](https://www.linkedin.com/in/princenwuke)
 
+  👤 **Mahabub Alam**
+
+- GitHub: [@mahabubx7](https://github.com/mahabubx7)
+- Twitter: [@mahabub__7](https://twitter.com/mahabub__7)
+- LinkedIn: [in/mahabubx7](https://linkedin.com/in/mahabubx7)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
