@@ -114,3 +114,11 @@
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
+.notice {
+  text-align: center;
+}
+
+.alert {
+  text-align: center;
+}
