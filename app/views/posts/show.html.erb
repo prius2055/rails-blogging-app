@@ -9,19 +9,25 @@
       </p>
     </div>
     <p><%=@post.text %></p>
+     
   </div>
   
 
   <div class='user-text'>
     <%@post.five_most_recent_comments.each do |postcomment| %>
       <p>
-        <span><%= postcomment.author.name %></span>:
+        <span><%= postcomment.id %></span>:<span><%= postcomment.author.name %></span>:
         <span><%= postcomment.text %></span>
       </p>
+      <% if can?(:destroy, postcomment) %>
+      <%= button_to 'Delete comment', user_post_comment_path(params[:user_id],@post,postcomment), method: :delete %>
+      <% end %>
     <% end %>
   </div>
 
- 
+<% if can?(:destroy, @post) %>
+  <%= button_to 'Delete this post', user_post_path(@post.id), method: :delete %>
+<% end %>
   <a href='/users/<%= @user.id%>/posts/<%= @post.id%>/likes/new' ><button style="margin-left: 150px;">Like this post</button></a>
   <a href='/users/<%= @user.id%>/posts/<%= @post.id%>/comments/new' ><button style="margin-left: 150px;">Add a comment</button></a>
   

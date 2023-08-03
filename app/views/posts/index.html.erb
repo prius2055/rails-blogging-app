@@ -7,7 +7,7 @@
  <% @posts.includes(:comments).each do |post| %> 
  
  
-    <%= render 'partials/post', post: post%>
+    <%= render 'partials/post', post: post, user: @user%>
    
     
  
@@ -26,7 +26,10 @@
   
   <a href="/users/<%= @user.id%>/posts/new" ><button style="margin-top: 10px;">Create new post</button></a>
   <% end %>
+
+  
   <div class='btn-paginate'>
+  
   <button>Pagination</button>
   </div>
 </div>

@@ -13,9 +13,21 @@ class CommentsController < ApplicationController
     @comment.post_id = params[:post_id]
 
     if @comment.save
-      redirect_to "/users/#{params[:user_id]}/posts/#{params[:post_id]}"
+      redirect_to user_post_path
     else
       render :new
+    end
+  end
+
+  def destroy
+    @comment = Comment.find_by(id: params[:id])
+    @comment.destroy
+
+    respond_to do |format|
+      format.html do
+        redirect_to user_post_path, notice: 'Comment was destroyed successfully.'
+      end
+      format.json { head :no_content }
     end
   end
 
