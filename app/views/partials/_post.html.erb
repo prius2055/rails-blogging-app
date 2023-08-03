@@ -2,10 +2,15 @@
   <p>Post #<%= post.id%>:<%= post.title%></p>
 
   <p><%= post.text%></p>
-  <p class='user-post'>
+
+   <div class='parameters'>
+        <button>Delete post</button>
+        <p class='user-post'>
     Comments:<span><%= post.comments_counter %></span>,
     Likes:<span><%= post.likes_counter %></span>
   </p>
+       </div>
+ 
 </div>
 
 

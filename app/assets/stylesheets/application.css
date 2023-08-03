@@ -122,3 +122,9 @@
 .alert {
   text-align: center;
 }
+
+.parameters {
+  display: flex;
+  justify-content: space-between;
+}
+

@@ -11,10 +11,15 @@
       <div class='user-text'>
         <p>Post #<%= post.id %></p>
         <p><%= post.text %></p>
+         <div class='parameters'>
+        <button>Delete post</button>
         <p class='user-post'> Comments:<span><%= post.comments_counter %></span>, Likes: <span><%= post.likes_counter %></span> </p>
+       </div>
       </div>
       <% end %>
+     
     <% end %>
+    <a href="/users/<%= @user.id%>/posts/new" ><button style="margin-top: 10px;">Create new post</button></a>
     <a href="/users/<%= @user.id%>/posts" ><button>See all Posts</button></a>
 
 </div>
