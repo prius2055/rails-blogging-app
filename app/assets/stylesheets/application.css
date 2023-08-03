@@ -115,6 +115,10 @@
   margin-bottom: 15px;
 }
 
-.notice, .alert {
- text-align: center;
+.notice {
+  text-align: center;
+}
+
+.alert {
+  text-align: center;
 }
