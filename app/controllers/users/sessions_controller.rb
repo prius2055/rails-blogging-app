@@ -3,12 +3,9 @@ class Users::SessionsController < Devise::SessionsController
 
   # GET /resource/sign_in
 
-
   # POST /resource/sign_in
 
-
   # DELETE /resource/sign_out
-
 
   # protected
 
