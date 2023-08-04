@@ -88,11 +88,9 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-<ul>
-
-    <li>run git clone "https://https://github.com/prius2055/rails-blogging-app.git"</li>
-
-  </ul>
+```sh
+git clone "https://https://github.com/prius2055/rails-blogging-app.git
+```
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,7 +100,7 @@ To install this project, run
 
 ```sh
 
-Bundle install
+bundle install
 
 ```
 
@@ -135,7 +133,7 @@ You can deploy this project using:
 - github pages
 
 ```sh
-- npm run deploy
+npm run deploy
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -162,7 +160,7 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Upadte the views dynamically]**
+- [x] **[Upadte the views dynamically]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
