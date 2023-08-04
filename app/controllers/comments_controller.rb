@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
   def index
     @comments = Comment.all
   end
@@ -13,7 +14,7 @@ class CommentsController < ApplicationController
     @comment.post_id = params[:post_id]
 
     if @comment.save
-      redirect_to user_post_path
+      redirect_to "/users/#{params[:user_id]}/posts/#{params[:post_id]}"
     else
       render :new
     end

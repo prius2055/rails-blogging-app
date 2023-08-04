@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @posts = Post.where(author_id: params[:user_id])
     @user = User.find(params[:user_id])
@@ -26,7 +27,7 @@ class PostsController < ApplicationController
     end
   end
 
-    def destroy
+  def destroy
     @post = Post.find_by_id(params[:id])
     @post.likes.destroy_all
     @post.comments.destroy_all

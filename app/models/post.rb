@@ -11,6 +11,8 @@ class Post < ApplicationRecord
     update_user_posts_counter
   end
 
+  after_destroy :decrement_user_posts_counter
+
   def update_user_posts_counter
     user = User.find_by(id: author.id)
     user.increment!(:posts_counter)
@@ -18,5 +20,9 @@ class Post < ApplicationRecord
 
   def five_most_recent_comments
     comments.order(created_at: :desc).limit(5)
+  end
+
+  def decrement_user_posts_counter
+    author.decrement!(:posts_counter)
   end
 end
